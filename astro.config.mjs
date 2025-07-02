@@ -6,19 +6,26 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'JRS Docs',
+			favicon: '/favicon.gif',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			customCss: [
+				'@fontsource/montserrat/400.css',
+				'@fontsource/montserrat/600.css',
+				'./src/styles/custom.css',
+			],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Introduction',
+					slug: 'index'
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'URP',
+					items: [
+						{ label: 'Getting Started', slug: 'urp/getting-started' },
+						{ label: 'Admin & Finance Menu', slug: 'urp/finance-menu' },
+						{ label: 'Reception Menu', slug: 'urp/reception-menu' },
+					],
 				},
 			],
 		}),
