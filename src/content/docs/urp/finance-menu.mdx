@@ -3,13 +3,9 @@ title: Admin & Finance Menu Guide
 description: Step-by-step guide for using the Admin & Finance Menu features in JRS URP application
 ---
 
-This guide walks you through the Admin & Finance Menu features in the JRS URP application.
-
 ## Overview
 
-The Admin & Finance Menu provides access to financial approval processes and reporting functionality. It's located in the Admin & Finance Menu section of the sidebar navigation.
-
-## Accessing the Admin & Finance Menu
+The Admin & Finance Menu provides financial approval processes and reporting functionality. It's located in the Admin & Finance Menu section of the sidebar navigation.
 
 To access the finance features, scroll down in the left sidebar until you see the "ADMIN & FINANCE MENU" section:
 
@@ -41,44 +37,30 @@ The Financial Approval feature allows you to view and manage client financial ap
 **Search Functionality -**
 - **Search box** in the top right for filtering records across all data fields
 
-**Data Columns -**
-- **#** - Row number
-- **Action** - Available actions (Invoice, Payment Process)
-- **Picture** - Client photo/image
-- **Action Reguler Case** - Regular case action buttons
-- **Payment Reguler Case** - Payment case action buttons  
-- **Request Assessment ID** - Unique assessment identifier
-- **CW Name** - Caseworker name
-- **FA Name** - Financial approval name
-- **Approve By** - User who approved the request
-- **Reg Date** - Registration date
-- **URP ID** - Unique URP identifier
-- **First Name** - Client's first name
-- **Last Name** - Client's last name
-- **UNHCR** - UNHCR reference number
-
 **Available Actions -**
-- **Invoice** - Generate invoices for approved cases
+
 - **Payment Process** - Process payments for approved financial assistance
+- **Invoice** - Generate invoices for approved cases
 - **Update Picture Clients** - Update client photos/documentation
 
 #### Payment Process Workflow
 
 Before accessing the Financial Approval page, the following workflow occurs -
 
-1. **Case Worker Registration** - Case worker registers the client in the system
-2. **Assessment** - Case worker conducts phone call assessment of client needs
-3. **Recommendation Submission** - Case worker recommends allowance amounts for:
-   - Housing support
-   - Food assistance  
-   - Medical expenses
-   - Transportation costs
-4. **Project Director Review** - Project Director reviews and decides actual allowance amounts for each category, may add comments
-5. **Finance Processing** - Case appears in Admin & Finance Menu for payment processing
+![URP data flow](../../../assets/diagrams/urp-flow.png)
 
-##### Finance User Payment Processing
+1. A **Client** makes contact to the _Reception_, via phone call, walk-in or LINE app
+2. The **Reception** searches the client's information in the URP system. If there's not, the client is going to be registered as new, regardless of whether they meet the criteria
+3. A **Case Worker** is assigned to the client by the _Reception_. An **Interpreter** is also assigned by the _Reception_ if necessary
+4. The _Case Worker_ makes assessements to the _Client_ and submit assistance recommendation to **Project Director**
+5. If the _Client_ is in need of psychosocial support, the _Case Worker_ also makes requests to a **Psychosocial Counselor** with a summary of communication with the client.
+6. The **Project Director** reviews records submitted by the _Case Worker_ and makes approval for the Finance Assistance and the amount of funds for each of Housing, Food, Medical and Transportation.
+7. The **Project Director** also reviews Interpreter activity and makes approval to settle interpreter payments. 
+8. Afer the **Project Director**'s approval, the finanical assistance record will show up in the "Financial Approval" page.
 
-When you click the **Payment Process** button for a specific client, the system redirects you to a detailed payment processing page. This page displays all previous workflow information that **cannot be edited** by Finance users.
+##### Payment Processing
+
+When you click the **Payment Process** button for a client, you will reach the payment processing page.
 
 ![Payment Process Page - Section 1](../../../assets/screenshots/payment-process-01.png)
 
@@ -88,11 +70,8 @@ When you click the **Payment Process** button for a specific client, the system 
 
 ![Payment Process Page - Section 4](../../../assets/screenshots/payment-process-04.png)
 
-##### Finance User Responsibilities
+As a Finance user, you can **edit** the following fields:
 
-As a Finance user, you can **only edit** the following fields:
-
-**Required Actions -**
 1. **FA Notes** - Add any financial approval notes if needed
 2. **Payment Status** - Select "Paid" (this option is selected by default)
 3. **Payment Date** - Set the actual payment date
@@ -140,13 +119,9 @@ Access historical financial approval data through the Financial Approval History
 
 ![Financial Approval History](../../../assets/screenshots/finance-approval-history.png)
 
-The Financial Approval History page provides a comprehensive historical record of all processed financial approvals. This read-only interface allows Finance users to:
-
-**Key Features -**
+**Features -**
 - **Search and Filter** - Locate specific historical records using the search functionality
 - **Export Options** - Download historical data in PDF, Excel, or CSV formats for reporting
-- **Complete Records** - View all past financial approval cases with relevant details
-- **Audit Trail** - Maintain compliance and tracking for completed financial assistance cases
 
 ### Report Financial-Fixed Date
 
@@ -158,81 +133,33 @@ The "Report Financial-Fixed Date" feature provides targeted financial reporting 
 
 ![Financial Approval Fixed Date Report](../../../assets/screenshots/fa-history-fixed-date.png)
 
-This specialized reporting tool allows Finance users to generate financial approval reports for specific time periods.
 
-**Key Features -**
+**Features -**
 - **Date Range Selection** - Choose specific start and end dates for targeted reporting
 - **Filtered Export** - Export only the financial approvals within the selected date range
 - **Same Export Options** - PDF, Excel, CSV formats available for download
-- **Focused Data** - View financial approval records for specific periods only
-
-**How to Use -**
-1. **Select Start Date** - Choose the beginning date for your report period
-2. **Select End Date** - Choose the ending date for your report period  
-3. **Apply Filter** - Click filter or refresh to display results for the selected date range
-4. **Export Data** - Use PDF, Excel, or CSV export options to download the filtered report
-
-**Use Cases -**
-- **Monthly Reports** - Generate reports for specific months
-- **Quarterly Analysis** - Export data for quarterly financial reviews
-- **Custom Periods** - Create reports for any specific date range needed
-- **Compliance Reporting** - Generate reports for specific audit periods
 
 ### Interpreter Payment
 
-The "Interpreter Payment" feature handles the final step of interpreter compensation after project director approval.
-
-Before Finance users can process payments, the following steps occur:
-
-1. **Reception Registration** - Reception staff registers interpreters and their payment rates
-2. **Activity Recording** - Reception records interpretation activity sessions
-3. **Payment Request** - Reception requests payment approval to Project Director
-4. **Project Director Approval** - Project Director reviews and approves interpreter payments
-5. **Finance Settlement** - Finance processes the actual payment
-
-#### Accessing Interpreter Payment
-
-1. From the sidebar, click on "Interpreter Payment" (located under the Admin & Finance Menu)
+- From the sidebar, click on "Interpreter Payment" (located under the Admin & Finance Menu)
 
 ![Interpreter Payment](../../../assets/screenshots/interpreter-payment-fa.png)
 
-#### Finance User Actions
-
-Finance users handle the final payment settlement for approved interpreter services through a two-step process.
-
-**Step 1 - Request Payment Approval -**
+**Step 1 - Request Payment Approval -** _(can also be done by Reception)_
 1. **Access Interpreter Records** - Navigate to interpreter payment list by clicking Interpreter Payment menu
 2. **Click Request Approval** - Click "Request Approval" button in Action column (only visible for pending records)
 3. **Update Payment Details** - Modify payment information and add notes
 4. **Submit for Approval** - Send request to Project Director for approval
 
-**Step 2 - Process Payment Settlement -**
+**Step 2 - Process Payment Settlement -** _(can be done by Admin & Finance only)_
 1. **Access Approved Records** - View Project Director approved interpreter payments
 2. **Click Process Payment** - Click "Process Payment" button in Payment Status column (only visible for approved records)
 3. **Auto-Generated Fields** - System creates payment code and sets payment date
 4. **Complete Payment** - Submit to mark payment as "Paid" status
 
-**Available Actions -**
-- **Request Approval** - Button appears in Action column for pending records
-- **Process Payment** - Button appears in Payment Status column for Project Director approved records
-- **Invoice** - Button appears in Payment Invoice column for completed payments (generates PDF invoice)
-- **Add Int Payment Code** - Header button to manually add payment codes (currently experiencing issues)
-- **Show IntPayment Code** - Header button to view previously processed payment codes and history
-
-**Button Visibility Conditions -**
 - **Request Approval** - Only visible when payment approval not yet requested
 - **Process Payment** - Only visible when Project Director approved but payment status is "Outstanding Payment"
 - **Invoice** - Only visible when payment is both approved and marked as "Paid"
-
-**Finance User Permissions -**
-- Can request payment approval to Project Director
-- Can mark approved payments as "Paid"
-- Cannot modify interpreter personal information or payment rates
-- Cannot edit work descriptions or service details after approval
-
-:::caution
-Right now, Manually adding Interpreter payment code is facing some issues and not easily recorded into the system. Once we find out the cause, will fix it and take down this caution.
-:::
 
 ### Report Appointment
 The "Report Appointment" menu generates a report for all client appointments and assessment-related communications in the JRS URP system.
